@@ -1,0 +1,25 @@
+/* colors */
+$lightGray: rgba(155,155,155,0.4);
+$darkGray: rgba(0,0,0,0.7);
+$blue: #4a8fe1;
+
+.next-btn{
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  border: none;
+  svg{
+    width: 15px;
+  }
+  &:disabled{
+    opacity: 0.5;
+    &:hover{
+      cursor: not-allowed;
+    }
+  }
+  &:hover{
+    cursor: pointer;
+  }
+}

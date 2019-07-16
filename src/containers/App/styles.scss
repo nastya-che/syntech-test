@@ -1,0 +1,57 @@
+/* colors */
+$lightGray: rgba(155,155,155,0.4);
+$darkGray: rgba(0,0,0,0.7);
+$blue: #4a8fe1;
+
+/* variables */
+$borderRadius: 5px;
+
+
+/* COMMON STYLES */
+
+*{
+  outline: none;
+}
+
+
+/* App block styles */
+
+.App{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+
+/* MainWrapper block styles */
+
+main{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.main-wrapper{
+  width: 320px;
+  height: 500px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: $borderRadius;
+  border: 1px solid $lightGray;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $darkGray;
+  title{
+    color: $blue;
+    font-size: 13px;
+  }
+}
+
+main div{
+  transition: .2s linear;
+}
+

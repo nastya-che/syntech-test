@@ -1,0 +1,149 @@
+/* colors */
+$lightGray: rgba(155,155,155,0.4);
+$darkGray: rgba(0,0,0,0.7);
+$blue: #4a8fe1;
+
+/* mixins */
+@mixin allCentered(){
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin wholeSize(){
+  width: 100%;
+  height: 100%;
+}
+
+
+/* FORM STYLES */
+
+form{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  flex: 1;
+  position: relative;
+}
+
+/* GENDER GROUP STYLES */
+
+.gender-group{
+  @include allCentered;
+  margin-bottom: 30px;
+}
+
+.radio-wrap{
+  @include allCentered;
+  background: transparent;
+  color: $darkGray;
+  width: 90px;
+  height: 35px;
+  border: 1px solid $lightGray;
+  position: relative;
+  font-size: 13px;
+  & > div{
+    @include wholeSize;
+    position: absolute;
+    input{
+      @include wholeSize;
+      margin: 0;
+      padding: 0;
+      opacity: 0;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+  &.active-radio{
+    background: $blue;
+    color: #fff;
+  }
+  &:nth-child(2){
+    border-left: none;
+    border-right: none;
+  }
+  &:first-child{
+    border-radius: 5px 0 0 5px;
+  }
+  &:last-child{
+    border-radius: 0 5px 5px 0;
+  }
+
+}
+
+.contact-cell{
+  margin-bottom: 10px;
+  &.error{
+    input, label, span{
+      border-color: red;
+      color: red;
+    }
+
+  }
+  input{
+    width: 270px;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid $lightGray;
+    &::placeholder{
+      display: none;
+    }
+  }
+  label, span{
+    text-transform: uppercase;
+    font-size: 13px;
+    color: gray;
+  }
+}
+
+.date-wrap{
+  background: transparent;
+  width: 90px;
+  height: 35px;
+  border: 1px solid $lightGray;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $darkGray;
+  &:nth-of-type(2){
+    border-left: none;
+    border-right: none;
+  }
+  &:first-of-type{
+    border-radius: 5px 0 0 5px;
+  }
+  &:last-of-type{
+    border-radius: 0 5px 5px 0;
+  }
+
+  -webkit-appearance: none;
+  text-indent: 0.01px;
+  text-align: center;
+  text-align-last: center;
+
+  margin-bottom: 30px;
+}
+
+.group-label{
+  font-size: 13px;
+  text-transform: uppercase;
+  color: $darkGray;
+  margin-bottom: 15px;
+}
+
+.about-us{
+  width: 280px;
+  height: 35px;
+  background: transparent;
+  border: 1px solid $lightGray;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.warn{
+  position: absolute;
+  bottom: 10px;
+  width: auto;
+  right: 20px;
+}

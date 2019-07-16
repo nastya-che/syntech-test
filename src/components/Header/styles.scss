@@ -1,0 +1,19 @@
+/* colors */
+$lightGray: rgba(155,155,155,0.4);
+$darkGray: rgba(0,0,0,0.7);
+$blue: #4a8fe1;
+
+
+/* HEADER STYLES */
+
+header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .header-title{
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

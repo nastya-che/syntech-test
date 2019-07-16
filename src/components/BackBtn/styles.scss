@@ -1,0 +1,15 @@
+/* colors */
+$lightGray: rgba(155,155,155,0.4);
+$darkGray: rgba(0,0,0,0.7);
+$blue: #4a8fe1;
+
+
+
+.back-btn{
+  color: gray;
+  background: transparent;
+  border: none;
+  &:hover{
+    cursor: pointer;
+  }
+}
