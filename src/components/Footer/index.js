@@ -7,24 +7,24 @@ class Footer extends Component{
 
  render(){
 
-     const p = this.props;
+     const {pageNum, prevPage, nextPage, disabled} = this.props;
 
      return(
          <footer>
              <div className={'footer-wrap'}>
                  <div className={'footer-btn'}>
-                     {p.pageNum === 1 &&
+                     {pageNum === 1 &&
                      <BackBtn
-                         onClick={p.prevPage}
+                         onClick={prevPage}
                      />
                      }
                  </div>
 
                  <div className={'footer-btn'}>
-                     {p.pageNum < 2 &&
+                     {pageNum < 2 &&
                          <NextBtn
-                             disabled={p.disabled}
-                             onClick={p.nextPage}
+                             disabled={disabled}
+                             onClick={nextPage}
                          />
                      }
                  </div>

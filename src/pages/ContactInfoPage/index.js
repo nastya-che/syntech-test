@@ -266,7 +266,7 @@ class PersonalSection extends Component {
 
         ]
     }
-};
+}
 
 
 class OrderForm extends Component {

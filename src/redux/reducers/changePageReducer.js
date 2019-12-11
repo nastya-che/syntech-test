@@ -1,4 +1,3 @@
-
 export const changePageReducer = (state = 0, action) => {
     switch (action.type) {
         case 'NEXT_PAGE': {

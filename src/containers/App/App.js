@@ -7,15 +7,15 @@ import './styles.scss';
 class App extends React.Component{
 
     render(){
-        const p = this.props;
+        const {pageNum, prevPageAction, nextPageAction} = this.props;
 
         return (
             <div className="App">
                 <div className={'main-wrapper'}>
                     <ContactForm
-                        pageNum={p.pageNum}
-                        prevPage={p.prevPageAction}
-                        nextPage={p.nextPageAction}
+                        pageNum={pageNum}
+                        prevPage={prevPageAction}
+                        nextPage={nextPageAction}
                     />
                 </div>
             </div>
